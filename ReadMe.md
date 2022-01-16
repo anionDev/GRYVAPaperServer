@@ -12,7 +12,7 @@ The Paper-version in the latest image is v1.18.1.
 
 ### Volumes
 
-Using volumes is recommended to preserve data. The available folder for a volume is:
+Using volumes is recommended to persist and preserve data. The available folders for shared volumes are:
 
 - `/Workspace/Shared/Configuration`: This folder contains all configurations of the hosted server.
 - `/Workspace/Shared/Data`: This folder contains all stored world-data the hosted server.
@@ -20,7 +20,10 @@ Using volumes is recommended to preserve data. The available folder for a volume
 
 ### Environment-variables
 
-There are currently no environment-variables available.
+The following environment-variables are available:
+
+- `java_xms`: MinHeapSize-value
+- `java_xmx`: MaxHeapSize-value
 
 ### Example
 

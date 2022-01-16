@@ -8,7 +8,7 @@ WORKDIR /Workspace
 RUN apt update
 RUN apt install -y git openjdk-17-jre-headless wget iputils-ping
 
-RUN git clone --single-branch --branch stable git://github.com/anionDev/ScriptCollection.git
+RUN git clone --single-branch --branch main git://github.com/anionDev/ScriptCollection.git
 RUN chmod -R +x ./ScriptCollection/Other
 
 RUN /Workspace/ScriptCollection/Other/ServerMaintenance/Debian/Common/CreateUser.sh "user" "/userhome" "false" "" "false" "false"
