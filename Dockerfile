@@ -8,7 +8,7 @@ WORKDIR /Workspace
 RUN apt update
 RUN apt install -y git openjdk-17-jre-headless wget iputils-ping
 
-RUN git clone --single-branch --branch main git://github.com/anionDev/ScriptCollection.git
+RUN git clone --single-branch --branch main https://github.com/anionDev/ScriptCollection.git
 RUN chmod -R +x ./ScriptCollection/Other
 
 RUN /Workspace/ScriptCollection/Other/ServerMaintenance/Debian/Common/CreateUser.sh "user" "/userhome" "false" "" "false" "false"
@@ -21,7 +21,7 @@ RUN mkdir /Workspace/Shared/Configuration
 RUN mkdir /Workspace/Shared/Logs
 # TODO redirect logs and crash-reports to log-folder
 
-RUN wget https://papermc.io/api/v2/projects/paper/versions/1.18.1/builds/132/downloads/paper-1.18.1-132.jar --no-verbose --output-document /Workspace/Program/App/server.jar
+RUN wget https://papermc.io/api/v2/projects/paper/versions/1.18.2/builds/276/downloads/paper-1.18.2-276.jar --no-verbose --output-document /Workspace/Program/App/server.jar
 
 COPY ./EntryPointScript.sh /Workspace/Program/App/EntryPointScript.sh
 RUN chmod +x /Workspace/Program/App/EntryPointScript.sh
