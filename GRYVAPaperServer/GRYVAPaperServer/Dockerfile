@@ -1,8 +1,10 @@
 FROM debian:stable-slim
 
+LABEL maintainer "marius.goecke@gmail.com"
+LABEL version="$Version"
+LABEL description="GRYVAPaperServer is a docker-image for simply running a Paper-server in a docker-container."
 ARG TargetEnvironmentType
 ARG Version="0.1.10"
-LABEL maintainer "marius.goecke@gmail.com"
 
 RUN mkdir /Workspace
 WORKDIR /Workspace
