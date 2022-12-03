@@ -1,13 +1,13 @@
 #!/bin/bash
 
-if [ ! -f /Workspace/Shared/Configuration/.gitignore ]; then
-    touch /Workspace/Shared/Configuration/.gitignore
-    echo "cache" >> /Workspace/Shared/Configuration/.gitignore
-    echo "libraries" >> /Workspace/Shared/Configuration/.gitignore
-    echo "versions" >> /Workspace/Shared/Configuration/.gitignore
+if [ ! -f /Workspace/Configuration/.gitignore ]; then
+    touch /Workspace/Configuration/.gitignore
+    echo "cache" >> /Workspace/Configuration/.gitignore
+    echo "libraries" >> /Workspace/Configuration/.gitignore
+    echo "versions" >> /Workspace/Configuration/.gitignore
 fi
 
-command="java -Xms$java_xms -Xmx$java_xmx -jar /Workspace/Program/App/server.jar --nogui --universe /Workspace/Shared/Data"
+command="java -Xms$java_xms -Xmx$java_xmx -jar /Workspace/Program/server.jar --nogui --universe /Workspace/Data"
 
 echo run "$command"
 bash -c "$command"
