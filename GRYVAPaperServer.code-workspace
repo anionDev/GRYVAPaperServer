@@ -8,24 +8,35 @@
 		"version": "2.0.0",
 		"tasks": [
 			{
-				"label": "Build image (cache)",
-				"command": "docker",
-				"args": ["image", "build", "--force-rm", "--progress", "plain", "--build-arg", "EnvironmentStage=Development", "--tag", "gryvapaperserver:latest", "."],
-				"type": "shell"
-			},
-			{
-				"label": "Build image (no cache)",
-				"command": "docker",
-				"args": ["image", "build", "--no-cache", "--pull", "--force-rm", "--progress", "plain", "--build-arg", "EnvironmentStage=Development", "--tag", "gryvapaperserver:latest", "."],
-				"type": "shell"
-			},
-			{
-				"label": "Test image",
-				"command": "docker-compose",
-				"args": ["-f", "docker-compose.example.yml", "-p", "GRYVAPaperServer", "up", "--remove-orphans", "--force-recreate"],
-				"type": "shell"
+				"label": "GRYVAPaperServer: Build entire codeunit",
+				"command": "SCBuildCodeunit",
+				"args": [
+					"--codeunitfolder",
+					"${workspaceFolder}/GRYVAPaperServer"
+				],
+				"type": "shell",
 			}
 		]
 	},
-	"settings": {},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Debug current file",
+				"type": "python",
+				"request": "launch",
+				"program": "${file}",
+				"console": "integratedTerminal"
+			}
+		]
+	},
+	"settings": {
+		"spellright.language": [
+			"en",
+		],
+		"spellright.documentTypes": [
+			"markdown",
+			"plaintext",
+		],
+	}
 }
