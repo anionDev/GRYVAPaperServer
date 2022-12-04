@@ -35,7 +35,7 @@ None of these environment-variables are required.
 
 ### Example
 
-See [`docker-compose.example.yml`](https://projects.aniondev.de/PublicProjects/GRYVAImages/GRYVAPaperServer/-/blob/main/GRYVAPaperServer/Other/Reference/ReferenceContent/Examples/docker-compose.example.yml) for an example how to use this image.
+See the [minimal example `docker-compose.yml`](https://projects.aniondev.de/PublicProjects/GRYVAImages/GRYVAPaperServer/-/blob/main/GRYVAPaperServer/Other/Examples/MinimalDockerComposeFile/docker-compose.yml) for an example how to use this image.
 
 ## Development
 
