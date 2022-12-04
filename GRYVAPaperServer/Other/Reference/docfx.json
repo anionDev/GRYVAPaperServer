@@ -4,13 +4,9 @@
     "content": [
       {
         "files": [
-          "**.md",
-          "**.yml"
+          "**.md"
         ],
-        "src": "./ReferenceContent",
-        "exclude": [
-          "Examples/**"
-        ]
+        "src": "./ReferenceContent"
       }
     ],
     "resource": [

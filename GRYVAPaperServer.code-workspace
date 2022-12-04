@@ -1,6 +1,10 @@
 {
 	"folders": [
 		{
+			"path": ".",
+			"name": "Entire repository"
+		},
+		{
 			"path": "./GRYVAPaperServer",
 			"name": "GRYVAPaperServer"
 		}
@@ -15,6 +19,12 @@
 					"--codeunitfolder",
 					"${workspaceFolder}/GRYVAPaperServer"
 				],
+				"type": "shell",
+			},
+			{
+				"label": "GRYVAPaperServer: Run example",
+				"command": "GRYVAPaperServer/Other/Examples/MinimalDockerComposeFile/RunExample.py",
+				"args": [],
 				"type": "shell",
 			}
 		]
