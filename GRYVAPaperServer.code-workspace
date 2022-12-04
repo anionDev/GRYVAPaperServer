@@ -23,7 +23,7 @@
 			},
 			{
 				"label": "GRYVAPaperServer: Run example",
-				"command": "GRYVAPaperServer/Other/Examples/MinimalDockerComposeFile/RunExample.py",
+				"command": "python3 GRYVAPaperServer/Other/Examples/MinimalDockerComposeFile/RunExample.py",
 				"args": [],
 				"type": "shell",
 			}
