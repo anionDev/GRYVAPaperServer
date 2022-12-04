@@ -1,4 +1,4 @@
-This project provides an image for a containerized TOR-application.
+This project provides an image for a containerized Paper-application.
 The authors of this application are owner of all rights of the application.
 So obviously the original application-license also applies when using this image.
 See the following link for the license of the application:
