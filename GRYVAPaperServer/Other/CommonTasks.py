@@ -4,6 +4,7 @@ from pathlib import Path
 from ScriptCollection.GeneralUtilities import GeneralUtilities
 from ScriptCollection.ScriptCollectionCore import ScriptCollectionCore
 from ScriptCollection.TasksForCommonProjectStructure import TasksForCommonProjectStructure
+import re
 
 
 def common_tasks():
@@ -20,6 +21,7 @@ def common_tasks():
         "../..", os.path.dirname(file)))  # Should always be the same as the project-version
     sc.replace_version_in_dockerfile_file(GeneralUtilities.resolve_relative_path(f"../{codeunitname}/Dockerfile", folder_of_current_file), codeunit_version)
     t.standardized_tasks_do_common_tasks(file, codeunit_version, verbosity, targetenvironmenttype, True, additional_arguments_file, cmd_args)
+    t.standardized_tasks_update_version_in_docker_examples(file, codeunit_version)
 
 
 if __name__ == "__main__":

@@ -9,5 +9,5 @@ fi
 
 command="java -Xms$java_xms -Xmx$java_xmx -jar /Workspace/Program/server.jar --nogui --universe /Workspace/Data"
 
-echo run "$command"
+echo "Run '$command'..."
 bash -c "$command"

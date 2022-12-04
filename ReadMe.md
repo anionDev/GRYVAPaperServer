@@ -4,7 +4,7 @@
 
 ## General
 
-[GRYVAPaperServer](https://projects.aniondev.de/PublicProjects/GRYVAImages/GRYVAPaperServer) is a docker-image for simply running a [paper](https://papermc.io)-server in a docker-container.
+[GRYVAPaperServer](https://projects.aniondev.de/PublicProjects/GRYVAImages/GRYVAPaperServer) is a docker-image for simply running a [Paper](https://papermc.io)-server in a docker-container.
 The details can be found [here](https://projects.aniondev.de/PublicProjects/GRYVAImages/GRYVAPaperServer/-/tree/main/GRYVAPaperServer).
 
 ## Development

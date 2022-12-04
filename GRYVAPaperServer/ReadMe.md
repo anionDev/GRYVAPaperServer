@@ -1,8 +1,14 @@
 # GRYVAPaperServer
 
+## Development-state
+
+![Development-state](https://img.shields.io/badge/development--state-maintenance%20updates%20only-green)
+
+The underlying [Paper](https://papermc.io)-server will be developed actively.
+
 ## Purpose
 
-[GRYVAPaperServer](https://projects.aniondev.de/PublicProjects/GRYVAImages/GRYVAPaperServer) is a docker-image for simply running a [paper](https://papermc.io)-server in a docker-container.
+[GRYVAPaperServer](https://projects.aniondev.de/PublicProjects/GRYVAImages/GRYVAPaperServer) is a docker-image for simply running a [Paper](https://papermc.io)-server in a docker-container.
 
 The latest-release contains Paper v1.19.2.
 
