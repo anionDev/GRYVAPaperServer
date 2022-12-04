@@ -12,9 +12,8 @@ def run_dockerfile_example_in_common_project_structure(current_file: str):
     oci_image_artifacts_folder = GeneralUtilities.resolve_relative_path("../../../Artifacts/BuildResult_OCIImage", folder)
     image_filename = os.path.basename(sc.find_file_by_extension(oci_image_artifacts_folder, "tar"))
     codeunit_name = os.path.basename(GeneralUtilities.resolve_relative_path("../../../..", folder))
-    tag = f"{codeunit_name}:test_for_{example_name}"
     sc.run_program("docker", f"load -i {image_filename}", oci_image_artifacts_folder)
-    sc.run_program("docker-compose", f"")
+    sc.run_program("docker-compose", f"--project-name {codeunit_name}_{example_name} up", folder)
 
 
 def run_example():
