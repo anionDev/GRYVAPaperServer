@@ -1,0 +1,15 @@
+version: '3.2'
+
+services:
+  gryvapaperserver:
+    image: 'gryvapaperserver:latest'
+    container_name: 'gryvapaperserver'
+    ports:
+      - 25565:25565
+    volumes:
+      - "./Volumes/Configuration:/Workspace/Configuration"
+      - "./Volumes/Data:/Workspace/Data"
+      - "./Volumes/Logs:/Workspace/Logs"
+    environment:
+      - java_xms=2G
+      - java_xmx=4G

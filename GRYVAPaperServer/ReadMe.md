@@ -1,11 +1,35 @@
 # GRYVAPaperServer
 
-![Development-state](https://img.shields.io/badge/development--state-maintenance%20updates%20only-green)
-
-## General
+## Purpose
 
 [GRYVAPaperServer](https://projects.aniondev.de/PublicProjects/GRYVAImages/GRYVAPaperServer) is a docker-image for simply running a [paper](https://papermc.io)-server in a docker-container.
-The details can be found [here](https://projects.aniondev.de/PublicProjects/GRYVAImages/GRYVAPaperServer/-/tree/main/GRYVAPaperServer).
+
+The latest-release contains Paper v1.19.2.
+
+## Usage
+
+### Volumes
+
+Using volumes is not required. There are 2 optional volumes:
+
+- `/Workspace/Shared/Configuration`
+- `/Workspace/Shared/Data`
+- `/Workspace/Shared/Logs`
+
+The path in the container for this log-folder is `/var/log/tor`.
+
+### Environment-variables
+
+The following environment-variables are available:
+
+- `java_xms`
+- `java_xmx`
+
+None of these environment-variables are required.
+
+### Example
+
+See [`docker-compose.example.yml`](https://projects.aniondev.de/PublicProjects/GRYVAImages/GRYVAPaperServer/-/blob/main/GRYVAPaperServer/Other/Reference/ReferenceContent/Examples/docker-compose.example.yml) for an example how to use this image.
 
 ## Development
 
