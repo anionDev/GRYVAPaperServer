@@ -10,19 +10,17 @@ The underlying [Paper](https://papermc.io)-server will be developed actively.
 
 [GRYVAPaperServer](https://projects.aniondev.de/PublicProjects/GRYVAImages/GRYVAPaperServer) is a docker-image for simply running a [Paper](https://papermc.io)-server in a docker-container.
 
-The latest-release contains Paper v1.19.2.
+The latest-release contains Paper v1.19.3.
 
 ## Usage
 
 ### Volumes
 
-Using volumes is not required. There are 2 optional volumes:
+There are 3 volumes-paths:
 
 - `/Workspace/Shared/Configuration`
 - `/Workspace/Shared/Data`
 - `/Workspace/Shared/Logs`
-
-The path in the container for this log-folder is `/var/log/tor`.
 
 ### Environment-variables
 

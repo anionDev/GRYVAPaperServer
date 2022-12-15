@@ -4,7 +4,7 @@ LABEL maintainer "marius.goecke@gmail.com"
 LABEL version="$Version"
 LABEL description="GRYVAPaperServer is a docker-image for simply running a Paper-server in a docker-container."
 ARG TargetEnvironmentType
-ARG Version="0.1.1"
+ARG Version="0.1.2"
 
 RUN mkdir /Workspace
 WORKDIR /Workspace
@@ -23,7 +23,7 @@ RUN mkdir /Workspace/Configuration
 RUN mkdir /Workspace/Logs
 # TODO redirect logs and crash-reports to log-folder
 
-RUN wget https://api.papermc.io/v2/projects/paper/versions/1.19.2/builds/303/downloads/paper-1.19.2-303.jar --no-verbose --output-document /Workspace/Program/server.jar
+RUN wget https://api.papermc.io/v2/projects/paper/versions/1.19.3/builds/333/downloads/paper-1.19.3-333.jar --no-verbose --output-document /Workspace/Program/server.jar
 
 COPY ./EntryPointScript.sh /Workspace/Program/EntryPointScript.sh
 RUN chmod +x /Workspace/Program/EntryPointScript.sh
