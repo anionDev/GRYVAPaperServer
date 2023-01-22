@@ -1,7 +1,6 @@
 Artifacts
 Resources/TestCoverageBadges/**
 !Resources/TestCoverageBadges/badge_shieldsio_linecoverage_blue.svg
-Reference/ReferenceContent/api/**
 Resources/DependentCodeUnits
 Resources/Constants
-!Reference/ReferenceContent/api/index.md
+Resources/PaperServer

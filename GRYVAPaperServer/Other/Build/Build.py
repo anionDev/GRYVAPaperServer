@@ -1,5 +1,4 @@
 import sys
-import os
 from pathlib import Path
 from ScriptCollection.GeneralUtilities import GeneralUtilities
 from ScriptCollection.ScriptCollectionCore import ScriptCollectionCore

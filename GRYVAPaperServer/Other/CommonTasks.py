@@ -1,10 +1,21 @@
 import sys
 import os
+import urllib.request
 from pathlib import Path
 from ScriptCollection.GeneralUtilities import GeneralUtilities
 from ScriptCollection.ScriptCollectionCore import ScriptCollectionCore
 from ScriptCollection.TasksForCommonProjectStructure import TasksForCommonProjectStructure
 import re
+
+
+def download_paperserver():
+
+    folder_of_this_file = os.path.dirname(os.path.realpath(__file__))
+    resource_folder = GeneralUtilities.resolve_relative_path("Resources\\PaperServer", folder_of_this_file)
+    GeneralUtilities.ensure_directory_does_not_exist(resource_folder)
+    GeneralUtilities.ensure_directory_exists(resource_folder)
+    target_file = os.path.join(resource_folder, "PaperServer.jar")
+    urllib.request.urlretrieve("https://api.papermc.io/v2/projects/paper/versions/1.19.3/builds/383/downloads/paper-1.19.3-383.jar", target_file)
 
 
 def common_tasks():
@@ -19,6 +30,7 @@ def common_tasks():
     additional_arguments_file = t.get_additionalargumentsfile_from_commandline_arguments(cmd_args, None)
     codeunit_version = sc.get_semver_version_from_gitversion(GeneralUtilities.resolve_relative_path(
         "../..", os.path.dirname(file)))  # Should always be the same as the project-version
+    download_paperserver()
     sc.replace_version_in_dockerfile_file(GeneralUtilities.resolve_relative_path(f"../{codeunitname}/Dockerfile", folder_of_current_file), codeunit_version)
     t.standardized_tasks_do_common_tasks(file, codeunit_version, verbosity, targetenvironmenttype, True, additional_arguments_file, cmd_args)
     t.standardized_tasks_update_version_in_docker_examples(file, codeunit_version)
