@@ -1,4 +1,4 @@
-FROM debian:stable-slim
+FROM alpine:latest
 
 LABEL maintainer "marius.goecke@gmail.com"
 LABEL version="$Version"

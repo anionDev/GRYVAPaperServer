@@ -1,23 +1,22 @@
 {
 	"folders": [
 		{
+			"path": "./GRYVAPaperServer",
+			"name": "GRYVAPaperServer"
+		},
+		{
 			"path": ".",
 			"name": "Entire repository"
 		},
-		{
-			"path": "./GRYVAPaperServer",
-			"name": "GRYVAPaperServer"
-		}
 	],
 	"tasks": {
 		"version": "2.0.0",
 		"tasks": [
 			{
-				"label": "GRYVAPaperServer: Build entire codeunit",
+				"label": "Build codeunits",
 				"command": "SCBuildCodeunit",
 				"args": [
 					"--codeunitfolder",
-					"${workspaceFolder}/GRYVAPaperServer"
 				],
 				"type": "shell",
 			},
