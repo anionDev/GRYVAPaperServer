@@ -2,7 +2,7 @@
 	"folders": [
 		{
 			"path": ".",
-			"name": "Entire repository"
+			"name": "Entire repository",
 		},
 		{
 			"path": "./GRYVAPaperServer",
@@ -13,19 +13,25 @@
 		"version": "2.0.0",
 		"tasks": [
 			{
-				"label": "GRYVAPaperServer: Build entire codeunit",
-				"command": "SCBuildCodeunit",
+				"label": "Build all codeunits",
+				"command": "SCBuildCodeunits",
 				"args": [
-					"--codeunitfolder",
-					"${workspaceFolder}/GRYVAPaperServer"
+					"--buildenvironment",
+					"Development"
 				],
 				"type": "shell",
+				"options": {
+					"cwd": "${workspaceFolder}",
+				},
 			},
 			{
 				"label": "GRYVAPaperServer: Run example",
-				"command": "python3 GRYVAPaperServer/Other/Examples/MinimalDockerComposeFile/RunExample.py",
+				"command": "python GRYVAPaperServer/Other/Reference/ReferenceContent/Examples/MinimalDockerComposeFile/RunExample.py",
 				"args": [],
 				"type": "shell",
+				"options": {
+					"cwd": "${workspaceFolder}",
+				},
 			}
 		]
 	},
@@ -42,12 +48,12 @@
 		]
 	},
 	"settings": {
-		"spellright.language": [
-			"en",
-		],
 		"spellright.documentTypes": [
 			"markdown",
 			"plaintext",
+		],
+		"spellright.language": [
+			"en",
 		],
 	}
 }

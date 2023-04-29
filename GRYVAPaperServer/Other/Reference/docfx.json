@@ -4,7 +4,11 @@
     "content": [
       {
         "files": [
-          "**.md"
+          "**.md",
+          "**.yml"
+        ],
+        "exclude": [
+          "Examples/MinimalDockerComposeFile/**"
         ],
         "src": "./ReferenceContent"
       }
@@ -12,7 +16,7 @@
     "resource": [
       {
         "files": [
-          "images/**"
+          "Images/**"
         ],
         "src": "./ReferenceContent"
       }

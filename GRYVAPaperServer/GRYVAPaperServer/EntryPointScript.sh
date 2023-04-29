@@ -7,7 +7,6 @@ if [ ! -f /Workspace/Configuration/.gitignore ]; then
     echo "versions" >> /Workspace/Configuration/.gitignore
 fi
 
-command="java -Xms$java_xms -Xmx$java_xmx -jar /Workspace/Program/server.jar --nogui --universe /Workspace/Data"
-
+command="$PWD> java -Xms$java_xms -Xmx$java_xmx -jar /Workspace/Application/PaperServer.jar --nogui --universe /Workspace/Data"
 echo "Run '$command'..."
 bash -c "$command"
