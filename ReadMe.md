@@ -1,15 +1,14 @@
 # GRYVAPaperServer
 
-## Development-state
-
-![Development-state](https://img.shields.io/badge/development--state-maintenance%20updates%20only-green)
-
 ## General
 
-[GRYVAPaperServer](https://projects.aniondev.de/PublicProjects/GRYVAImages/GRYVAPaperServer) is a docker-image for simply running a [Paper](https://papermc.io)-server in a docker-container.
-The details can be found [here](https://projects.aniondev.de/PublicProjects/GRYVAImages/GRYVAPaperServer/-/tree/main/GRYVAPaperServer).
+[GRYVAPaperServer](https://github.com/anionDev/GRYVAPaperServer) is a docker-image for simply running a [Paper](https://papermc.io)-server in a docker-container.
 
 ## Development
+
+### Development-state
+
+![Development-state](https://img.shields.io/badge/development--state-maintenance%20updates%20only-green)
 
 ### Branching-system
 
@@ -21,4 +20,4 @@ This repository applies the [CommonProjectStructure](https://projects.aniondev.d
 
 ## License
 
-See [License.txt](https://projects.aniondev.de/PublicProjects/GRYVAImages/GRYVAPaperServer/-/raw/main/License.txt) for license-information.
+See [License.txt](https://github.com/anionDev/GRYVAPaperServer/blob/main/License.txt) for license-information.

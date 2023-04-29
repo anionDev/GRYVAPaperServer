@@ -5,17 +5,15 @@ from pathlib import Path
 from ScriptCollection.GeneralUtilities import GeneralUtilities
 from ScriptCollection.ScriptCollectionCore import ScriptCollectionCore
 from ScriptCollection.TasksForCommonProjectStructure import TasksForCommonProjectStructure
-import re
 
 
 def download_paperserver():
-
     folder_of_this_file = os.path.dirname(os.path.realpath(__file__))
-    resource_folder = GeneralUtilities.resolve_relative_path("Resources\\PaperServer", folder_of_this_file)
+    resource_folder = GeneralUtilities.resolve_relative_path("./Resources/PaperServer", folder_of_this_file)
     GeneralUtilities.ensure_directory_does_not_exist(resource_folder)
     GeneralUtilities.ensure_directory_exists(resource_folder)
     target_file = os.path.join(resource_folder, "PaperServer.jar")
-    urllib.request.urlretrieve("https://api.papermc.io/v2/projects/paper/versions/1.19.3/builds/383/downloads/paper-1.19.3-383.jar", target_file)
+    urllib.request.urlretrieve("https://api.papermc.io/v2/projects/paper/versions/1.19.4/builds/521/downloads/paper-1.19.4-521.jar", target_file)
 
 
 def common_tasks():
