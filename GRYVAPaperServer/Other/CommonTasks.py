@@ -13,7 +13,7 @@ def download_paperserver():
     GeneralUtilities.ensure_directory_does_not_exist(resource_folder)
     GeneralUtilities.ensure_directory_exists(resource_folder)
     target_file = os.path.join(resource_folder, "PaperServer.jar")
-    urllib.request.urlretrieve("https://api.papermc.io/v2/projects/paper/versions/1.19.4/builds/521/downloads/paper-1.19.4-521.jar", target_file)
+    urllib.request.urlretrieve("https://api.papermc.io/v2/projects/paper/versions/1.19.4/builds/538/downloads/paper-1.19.4-538.jar", target_file)
 
 
 def common_tasks():
