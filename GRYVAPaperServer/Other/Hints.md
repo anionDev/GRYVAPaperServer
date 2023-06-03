@@ -10,3 +10,4 @@ The following tools from the [tools-list](https://github.com/anionDev/ScriptColl
 - `gitversion`
 - `reportgenerator`
 - `scriptcollection`
+- [`selenium`](https://pypi.org/project/selenium/) with a chrome-driver
