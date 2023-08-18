@@ -1,28 +1,31 @@
 import requests
 from pathlib import Path
-from ScriptCollection.ScriptCollectionCore import ScriptCollectionCore
 from ScriptCollection.TasksForCommonProjectStructure import TasksForCommonProjectStructure
-from selenium import webdriver
-import time
-import re
 
 
-def get_rendered_website(url: str, duration_in_seconds: int = 2) -> str:
-    driver = webdriver.Chrome()
-    driver.get(url)
-    time.sleep(duration_in_seconds)
-    htmlSource = driver.page_source
-    return htmlSource
+def get_latest_version_number(timeout_in_seconds: int) -> str:
+    url = 'https://api.papermc.io/v2/projects/paper'
+    response = requests.get(url=url, timeout=timeout_in_seconds)
+    data = response.json()
+    version_numbers = data['versions']
+    latest_version_number = version_numbers[-1]
+    return latest_version_number
+
+
+def get_latest_build_number(version_number: str, timeout_in_seconds: int) -> str:
+    url = f'https://api.papermc.io/v2/projects/paper/versions/{version_number}/builds'
+    response = requests.get(url=url, timeout=timeout_in_seconds)
+    data = response.json()
+    build_numbers = data['builds']
+    latest_build_number = build_numbers[-1]['build']
+    return str(latest_build_number)
 
 
 def get_latest_paper_version() -> str:
-    sc = ScriptCollectionCore()
-    website_content = get_rendered_website("https://papermc.io/downloads/paper")
-    regex = '\\"https\\:\\/\\/api\\.papermc\\.io\\/v2\\/projects\\/paper\\/versions\\/(\\d+\.\\d+\\.\\d+)\\/builds\\/(\\d+)\\/downloads\\/paper-\\d+\\.\\d+\\.\\d+-\\d+\\.jar\\"'
-    result = re.compile(regex).search(website_content)
-    version = result.groups(0)[0]
-    build = result.groups(0)[1]
-    return f"{version};{build}"
+    timeout_in_seconds = 3
+    latest_version_number = get_latest_version_number(timeout_in_seconds)
+    latest_build_number = get_latest_build_number(latest_version_number, timeout_in_seconds)
+    return f"{latest_version_number};{latest_build_number}"
 
 
 def update_dependencies():
