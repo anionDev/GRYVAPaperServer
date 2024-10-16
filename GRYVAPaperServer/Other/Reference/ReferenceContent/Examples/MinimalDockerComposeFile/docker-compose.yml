@@ -2,7 +2,7 @@ version: '3.2'
 
 services:
   gryvapaperserver:
-    image: gryvapaperserver:0.1.12
+    image: gryvapaperserver:0.1.13
     container_name: 'gryvapaperserver'
     ports:
       - 25565:25565
