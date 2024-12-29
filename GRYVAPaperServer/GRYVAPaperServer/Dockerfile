@@ -1,7 +1,7 @@
 FROM openjdk:21-jdk
 
 ARG TargetEnvironmentType
-ARG Version="0.1.16"
+ARG Version="0.1.17"
 LABEL maintainer "marius.goecke@gmail.com"
 LABEL description="GRYVAPaperServer is a docker-image for simply running a Paper-server in a docker-container."
 LABEL targetEnvironmentType="$TargetEnvironmentType"
