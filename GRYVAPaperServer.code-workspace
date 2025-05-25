@@ -9,16 +9,15 @@
 		"version": "2.0.0",
 		"tasks": [
 			{
-				"label": "Build all codeunits",
-				"command": "SCBuildCodeunits",
-				"args": [
-					"--buildenvironment",
-					"Development"
-				],
+				"label": "Base: Build all codeunits",
+				"command": "scbuildcodeunits",
 				"type": "shell",
 				"options": {
 					"cwd": "${workspaceFolder}"
-				}
+				},
+				"aliases": [
+					"bb"
+				]
 			},
 			{
 				"label": "GRYVAPaperServer: Run example",
