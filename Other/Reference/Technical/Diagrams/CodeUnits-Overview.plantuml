@@ -1,0 +1,11 @@
+@startuml CodeUnits-Overview
+title CodeUnits of GRYVAPaperServer
+
+[GRYVAPaperServer]
+note as GRYVAPaperServerNote
+  GRYVAPaperServer is a docker-image for simply running a Paper-server in a docker-container.
+end note
+GRYVAPaperServer .. GRYVAPaperServerNote
+
+
+@enduml

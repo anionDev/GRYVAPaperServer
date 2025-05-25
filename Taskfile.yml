@@ -1,0 +1,21 @@
+version: '3'
+
+tasks:
+
+  BuildAllCodeunits:
+    desc: "Build all codeunits"
+    silent: true
+    dir: "."
+    cmds:
+      - SCBuildCodeunits --buildenvironment Development
+    aliases:
+      - buildallcodeunits
+
+  GryvapaperserverRunExample:
+    desc: "GRYVAPaperServer: Run example"
+    silent: true
+    dir: "."
+    cmds:
+      - python GRYVAPaperServer/Other/Reference/ReferenceContent/Examples/MinimalDockerComposeFile/RunExample.py
+    aliases:
+      - gryvapaperserverrunexample
