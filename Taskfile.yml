@@ -2,14 +2,15 @@ version: '3'
 
 tasks:
 
-  BuildAllCodeunits:
-    desc: "Build all codeunits"
+  BaseBuildAllCodeunits:
+    desc: "Base: Build all codeunits"
     silent: true
     dir: "."
     cmds:
-      - SCBuildCodeunits --buildenvironment Development
+      - scbuildcodeunits
     aliases:
-      - buildallcodeunits
+      - basebuildallcodeunits
+      - bb
 
   GryvapaperserverRunExample:
     desc: "GRYVAPaperServer: Run example"
