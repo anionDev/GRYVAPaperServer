@@ -2,11 +2,7 @@
 	"folders": [
 		{
 			"path": ".",
-			"name": "Entire repository",
-		},
-		{
-			"path": "./GRYVAPaperServer",
-			"name": "GRYVAPaperServer"
+			"name": "Entire repository"
 		}
 	],
 	"tasks": {
@@ -21,8 +17,8 @@
 				],
 				"type": "shell",
 				"options": {
-					"cwd": "${workspaceFolder}",
-				},
+					"cwd": "${workspaceFolder}"
+				}
 			},
 			{
 				"label": "GRYVAPaperServer: Run example",
@@ -30,8 +26,8 @@
 				"args": [],
 				"type": "shell",
 				"options": {
-					"cwd": "${workspaceFolder}",
-				},
+					"cwd": "${workspaceFolder}"
+				}
 			}
 		]
 	},
@@ -40,7 +36,7 @@
 		"configurations": [
 			{
 				"name": "Debug current file",
-				"type": "python",
+				"type": "debugpy",
 				"request": "launch",
 				"program": "${file}",
 				"console": "integratedTerminal"
@@ -50,10 +46,10 @@
 	"settings": {
 		"spellright.documentTypes": [
 			"markdown",
-			"plaintext",
+			"plaintext"
 		],
 		"spellright.language": [
-			"en",
-		],
+			"en"
+		]
 	}
 }
