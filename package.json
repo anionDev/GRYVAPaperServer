@@ -1,0 +1,7 @@
+{
+  "name": "GRYVAPaperServer",
+  "scripts": {
+    "prepare": "husky"
+  },
+  "version": "0.1.23"
+}
